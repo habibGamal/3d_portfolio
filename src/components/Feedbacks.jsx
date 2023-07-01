@@ -14,7 +14,7 @@ const FeedbackCard = ({ testimonial, index }) => {
         >
             <span className="text-white font-black text-5xl">"</span>
             <div className="mt-1">
-                <p className="text-white tracking-wider text-lg">{testimonial.testimonial}</p>
+                <p className="text-white tracking-wider text-lg min-h-[85px]">{testimonial.testimonial}</p>
                 <div className="mt-7 flex justify-between items-center gap-1">
                     <div className="flex-1 flex flex-col">
                         <p className="font-medium">
@@ -24,7 +24,7 @@ const FeedbackCard = ({ testimonial, index }) => {
                             {testimonial.designation} of {testimonial.company}
                         </p>
                     </div>
-                    <img src={testimonial.image} alt="feedback" className="w-10 h-10 rounded-full object-cover" />
+                    <img src={testimonial.image} alt="feedback" className="w-16 h-16 rounded-full object-cover" />
                 </div>
             </div>
         </motion.div>
@@ -34,18 +34,12 @@ const FeedbackCard = ({ testimonial, index }) => {
 const Feedbacks = () => {
     return (
         <div className="mt-12 bg-black-100 rounded-xl">
-            <div
-                className={`${styles.padding} bg-tertiary rounded-2xl min-h-[300px]`}
-            >
+            <div className={`${styles.padding} bg-tertiary rounded-2xl min-h-[300px]`}>
                 <SectionHead title="Testimonials" subTitle="what others say" />
             </div>
             <div className={`${styles.paddingX} -mt-20 pb-14 flex flex-wrap gap-7`}>
                 {testimonials.map((testimonial, index) => (
-                    <FeedbackCard
-                        key={index}
-                        index={index}
-                        testimonial={testimonial}
-                    />
+                    <FeedbackCard key={index} index={index} testimonial={testimonial} />
                 ))}
             </div>
         </div>

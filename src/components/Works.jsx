@@ -13,7 +13,7 @@ const ProjectCard = ({ project, index }) => {
             // className="w-full green-pink-gradient p-1 rounded-2xl shadow-card"
         >
             <Tilt
-                options={{ max: 45, scale: 1, speed: 450 }}
+                options={{ max: 30, scale: 1, speed: 450 }}
                 className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
             >
                 <div className="relative w-full h-[230px]">

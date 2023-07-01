@@ -6,80 +6,50 @@ import { EarthCanvas } from "./canvas";
 import SectionWrapper from "../hoc/SectionWrapper";
 import { slideIn } from "../utils/motion";
 import SectionHead from "./SectionHead";
+const contactData = [
+    {
+        icon: "/facebook-icon.png",
+        link: "https://www.facebook.com/profile.php?id=100094350934368",
+        title: "Programming Studio",
+    },
+    {
+        icon: "/whatsapp-icon.png",
+        link: "https://wa.me/+201021153539",
+        title: "Call me any time",
+    },
+    {
+        icon: "/linkedin-icon.png",
+        link: "https://www.linkedin.com/in/habib-gamal/",
+        title: "Visit my linkedin",
+    },
+    {
+        icon: "/github-icon.png",
+        link: "https://github.com/habibGamal",
+        title: "Come to my github",
+    },
+];
 const Contact = () => {
-    const formRef = useRef();
-    const [form, setForm] = useState({
-        name: "",
-        email: "",
-        message: "",
-    });
-    const [loading, setLoading] = useState(false);
-    const handleChange = (e) => {
-		setForm({ ...form, [e.target.name]: e.target.value });
-	};
-    const handleSubmit = (e) => {};
     return (
         <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
-            <div className="bg-black-100 flex-[.75] rounded-2xl p-8">
+            <div className="bg-black-100 flex-[0.75] min-w-[40%] rounded-2xl p-8">
                 <SectionHead title="Contact." subTitle="Get in touch" />
-                <form
-                    ref={formRef}
-                    onSubmit={handleSubmit}
-                    className="mt-12 flex flex-col gap-8"
-                >
-                    <label htmlFor="name" className="flex flex-col">
-                        <span className="text-white font-medium mb-4">
-                            Your Name
-                        </span>
-                        <input
-                            type="text"
-                            name="name"
-                            value={form.name}
-                            onChange={handleChange}
-                            placeholder="What's your name?"
-                            className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
-                        />
-                    </label>
-                    <label htmlFor="email" className="flex flex-col">
-                        <span className="text-white font-medium mb-4">
-                            Your Email
-                        </span>
-                        <input
-                            type="email"
-                            name="email"
-                            value={form.email}
-                            onChange={handleChange}
-                            placeholder="What's your email?"
-                            className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
-                        />
-                    </label>
-                    <label htmlFor="message" className="flex flex-col">
-                        <span className="text-white font-medium mb-4">
-                            Your Message
-                        </span>
-                        <textarea
-                            rows={7}
-                            name="message"
-                            value={form.message}
-                            onChange={handleChange}
-                            placeholder="What do you want to say?"
-                            className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
-                        />
-                    </label>
-                    <button
-                        type="submit"
-                        className="bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl"
-                    >
-                        {loading ? "Sending..." : "Send"}
-                    </button>
-                </form>
+                <div className="mt-12 flex flex-col gap-8 text-xl">
+                    {contactData.map((contact, index) => (
+                        <div key={index} className="flex gap-8 items-center ">
+                            <img src={contact.icon} alt="" />
+                            <a className="hover:text-blue-500" href={contact.link}>
+                                {contact.title}
+                            </a>
+                        </div>
+                    ))}
+                </div>
             </div>
             <motion.div
                 variants={slideIn("right", "tween", 0.2, 1)}
-				className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
+                className="xl:flex-1 xl:h-auto md:h-[550px] md:w-[400px] h-[350px] w-[250px] mx-auto overflow-hidden"
             >
-				<EarthCanvas />
-			</motion.div>
+                <EarthCanvas />
+            </motion.div>
         </div>
     );
 };
