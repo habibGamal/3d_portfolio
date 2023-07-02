@@ -1,7 +1,4 @@
-import emailJs from "@emailjs/browser";
 import { motion } from "framer-motion";
-import { useState, useRef } from "react";
-import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import SectionWrapper from "../hoc/SectionWrapper";
 import { slideIn } from "../utils/motion";

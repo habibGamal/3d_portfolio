@@ -1,6 +1,6 @@
 import { BrowserRouter } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Navbar, Hero, About, Contact, Experience, Feedbacks, Tech, Works, StarsCanvas } from "./components";
+import { Navbar, Hero, About, Contact, Experience, Feedbacks, Works } from "./components";
 function App() {
     return (
         <BrowserRouter>
@@ -12,10 +12,8 @@ function App() {
                 <About />
                 <Works />
                 <Experience />
-                {/* <Tech /> */}
                 <Feedbacks />
                 <div className="relative z-0 overflow-hidden">
-                    {/* <StarsCanvas /> */}
                     <motion.img
                         animate={{
                             x: [0, 200, 0],

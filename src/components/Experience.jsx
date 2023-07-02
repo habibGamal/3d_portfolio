@@ -2,10 +2,9 @@ import React from "react";
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component/dist-modules";
 import { motion } from "framer-motion";
 import "react-vertical-timeline-component/style.min.css";
-import { styles } from "../styles";
 import { experiences } from "../constants";
 import SectionWrapper from "../hoc/SectionWrapper";
-import { fadeIn, textVariant } from "../utils/motion";
+import { fadeIn } from "../utils/motion";
 import SectionHead from "./SectionHead";
 import useMediaQuery from "../hooks/useMediaQuery";
 const ExperienceCard = ({ experience }) => {

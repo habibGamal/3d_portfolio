@@ -2,7 +2,7 @@ import React from "react";
 import Tilt from "react-tilt";
 import { motion } from "framer-motion";
 import { projects } from "../constants";
-import { fadeIn, textVariant } from "../utils/motion";
+import { fadeIn } from "../utils/motion";
 import SectionWrapper from "../hoc/SectionWrapper";
 import SectionHead from "./SectionHead";
 import { github } from "../assets";

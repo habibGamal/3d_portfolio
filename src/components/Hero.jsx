@@ -3,7 +3,7 @@ import {  easeInOut, motion, useScroll,  useTransform } from "framer-motion";
 import { styles } from "../styles";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { atomOneDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { fadeIn, slideIn } from "../utils/motion";
+import { fadeIn } from "../utils/motion";
 const code = `const project = 'idea';
 
 const developer = execute(project);
