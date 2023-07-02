@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import SectionWrapper from "../hoc/SectionWrapper";
 import { styles } from "../styles";
-import { fadeIn, textVariant } from "../utils/motion";
+import { fadeIn } from "../utils/motion";
 import { testimonials } from "../constants";
 import SectionHead from "./SectionHead";
 
@@ -12,6 +12,7 @@ const FeedbackCard = ({ testimonial, index }) => {
             variants={fadeIn("up")}
             initial="hidden"
             whileInView="show"
+            viewport={{ once: true }}
             className="bg-black-200 rounded-3xl w-full xs:w-[320px] p-10"
         >
             <span className="text-white font-black text-5xl">"</span>

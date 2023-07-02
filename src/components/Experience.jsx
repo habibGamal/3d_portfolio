@@ -28,7 +28,7 @@ const ExperienceCard = ({ experience }) => {
                 </div>
             }
         >
-            <motion.div variants={fadeIn("up")} initial="hidden" whileInView="show">
+            <motion.div variants={fadeIn("up")} initial="hidden" whileInView="show" viewport={{ once: true }}>
                 <div>
                     <h3 className="text-white text-xl font-bold">{experience.title}</h3>
                     <p className="text-secondary text-lg font-semibold">{experience.company_name}</p>
@@ -43,7 +43,7 @@ const ExperienceCard = ({ experience }) => {
     );
 };
 const Experience = () => {
-    const smallDevice = useMediaQuery('(max-width: 768px)');
+    const smallDevice = useMediaQuery("(max-width: 768px)");
 
     return (
         <>
