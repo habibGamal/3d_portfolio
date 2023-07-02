@@ -122,29 +122,24 @@ const experiences = [
         iconBg: "#383E56",
         date: "March 2023 - Present",
         points: [
-            "Casher System is a comprehensive Point of Sale (POS) system that offers a range of functionalities to streamline business operations.",
-
-            "The system provides efficient management of products, allowing users to add products, create product groups, track product details, handle expired products, and manage opening stocks.",
-
-            "Users can easily handle stock management by adding stocks, tracking inventory levels, managing stock losses, and facilitating transfers between different stock locations.",
-
-            "The invoicing feature enables users to display and create buying and selling invoices, as well as handle return transactions for both buying and selling invoices.",
-
-            'While some sections like Customers and Suppliers, Accounts, Management, and Notifications are  "Coming soon," the system already offers a user-friendly interface with both light and dark themes, prioritizing a nice UI and convenient UX to enhance the overall user experience.',
+            "Casher System: Comprehensive POS system for business operations.",
+            "Efficient product management: Add products, create groups, track details, handle expiration, manage opening stocks.",
+            "Easy stock management: Add stocks, track inventory, manage losses, transfer between locations.",
+            "Invoicing feature: Create buying/selling invoices, handle return transactions.",
         ],
     },
     {
         title: "Alottopics",
         company_name: "Wordpress Website",
-        icon: '/wordpress-icon.png',
+        icon: "/wordpress-icon.png",
         iconBg: "#E6DEDD",
         date: "Jan 2023 - Present",
         points: [
-            "Alottopics is a fashion design WordPress website that focuses on providing training to users through videos and tasks. The platform offers a dedicated section where users can access instructional videos and engage in practical exercises to enhance their fashion design skills.",
-
-            "The website features a gallery section that showcases the works of users. It provides a visually appealing display of the creative outputs of individuals who are part of the Alottopics community. This enables users to showcase their talent, gain recognition, and inspire others within the fashion design field.",
-
-            "Alottopics incorporates a sharing functionality that allows users to easily share their works on the platform. This promotes collaboration and interaction among users, fostering a supportive and creative community where individuals can learn from each other and exchange ideas.",
+            "Alottopics: Fashion design WordPress website for training through videos and tasks.",
+            "Instructional videos and exercises: Enhance fashion design skills through dedicated section.",
+            "Gallery section: Showcases users' works",
+            "Sharing functionality: Easily share works, promote collaboration and interaction.",
+            "Supportive community: Learn from others, exchange ideas in a creative environment.",
         ],
     },
     {
@@ -154,11 +149,9 @@ const experiences = [
         iconBg: "#E6DEDD",
         date: "Jan 2023 - March 2023",
         points: [
-            "CounteryVoice is a feature-rich desktop application focused on music learning theories related to country music. It provides users with in-depth knowledge and understanding of country music concepts and theories.",
-
-            "The application offers a practice section where users can apply the learned theories. It provides a wide range of controllers and editable music notes, allowing users to practice and experiment with different musical elements to enhance their skills and creativity.",
-
-            "The test section of CounteryVoice enables users to assess their understanding and application of country music theories. Through interactive quizzes or assessments, users can evaluate their progress and identify areas for improvement in their music learning journey.",
+            "CounteryVoice: Feature-rich desktop application for learning country music theories.",
+            "Practice section: Apply learned theories, wide range of controllers, editable music notes.",
+            "Test section: Assess understanding and application of country music theories.",
         ],
     },
     {
@@ -168,11 +161,11 @@ const experiences = [
         iconBg: "#383E56",
         date: "Nov 2022 - Dec 2022",
         points: [
-            "Diet4underweight is a mobile application designed to assist individuals who are underweight in creating a personalized nutrition plan. It includes a calculator that determines the Basal Metabolic Rate (BMR), allowing users to establish a suitable calorie intake for their goals.",
-
-            "The app enables users to create their own nutrition plan by calculating the calories of each meal. It offers the flexibility to distribute the allocated calories over the three main meals and snacks, ensuring a balanced and nutritious diet.",
-
-            "To help users stay on track with their meal schedule, Diet4underweight incorporates an alarm feature that alerts users when it's time to consume their meals. This ensures timely and consistent adherence to the prescribed nutrition plan. Additionally, the app provides a nutrition library where users can access educational resources to expand their knowledge on nutrition-related topics.",
+            "Diet4underweight: Mobile app for personalized nutrition plans for underweight individuals.",
+            "BMR calculator: Determine suitable calorie intake based on Basal Metabolic Rate.",
+            "Create nutrition plan: Calculate calories for each meal, distribute over main meals and snacks.",
+            "Meal schedule alarm: Timely reminders to consume meals, consistent adherence.",
+            "Nutrition library: Access educational resources on nutrition-related topics. ",
         ],
     },
 ];

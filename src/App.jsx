@@ -18,11 +18,11 @@ function App() {
                     {/* <StarsCanvas /> */}
                     <motion.img
                         animate={{
-                            x: [0, 1000, 0],
+                            x: [0, 200, 0],
                             y: [0, 10, 0],
                             transition: { duration: 60, repeat: Infinity },
                         }}
-                        className="w-full h-auto absolute inset-0 z-[-1]"
+                        className="w-full h-full object-cover absolute inset-0 z-[-1]"
                         src="/sky-stars.png"
                     />
                     <Contact />
