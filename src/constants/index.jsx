@@ -116,7 +116,7 @@ const technologies = [
 
 const experiences = [
     {
-        title: "Cashier System",
+        title: "Develop Cashier System",
         company_name: "POS System",
         icon: "/system-icon.png",
         iconBg: "#383E56",

@@ -18,7 +18,7 @@ function App() {
                         animate={{
                             x: [0, 200, 0],
                             y: [0, 10, 0],
-                            transition: { duration: 60, repeat: Infinity },
+                            transition: { duration: 30, repeat: Infinity },
                         }}
                         className="w-full h-full object-cover absolute inset-0 z-[-1]"
                         src="/sky-stars.png"

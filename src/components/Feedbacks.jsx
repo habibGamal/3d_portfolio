@@ -17,7 +17,7 @@ const FeedbackCard = ({ testimonial, index }) => {
         >
             <span className="text-white font-black text-5xl">"</span>
             <div className="mt-1">
-                <p className="text-white tracking-wider text-lg min-h-[85px]">{testimonial.testimonial}</p>
+                <p className="text-white tracking-wider text-lg md:min-h-[85px]">{testimonial.testimonial}</p>
                 <div className="mt-7 flex justify-between items-center gap-1">
                     <div className="flex-1 flex flex-col">
                         <p className="font-medium">
@@ -40,7 +40,7 @@ const Feedbacks = () => {
             <div className={`${styles.padding} bg-tertiary rounded-2xl min-h-[300px]`}>
                 <SectionHead title="Testimonials" subTitle="what others say" />
             </div>
-            <div className={`${styles.paddingX} -mt-20 pb-14 flex flex-wrap gap-7`}>
+            <div className={`${styles.paddingX} -mt-20 pb-14 flex flex-wrap justify-center gap-7`}>
                 {testimonials.map((testimonial, index) => (
                     <FeedbackCard key={index} index={index} testimonial={testimonial} />
                 ))}
