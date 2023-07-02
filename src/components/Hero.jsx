@@ -1,7 +1,6 @@
-import React, { useEffect } from "react";
-import { MotionValue, motion, useScroll, useSpring, useTransform } from "framer-motion";
+import React from "react";
+import {  easeInOut, motion, useScroll,  useTransform } from "framer-motion";
 import { styles } from "../styles";
-import { ComputersCanvas } from "./canvas";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { atomOneDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import { fadeIn, slideIn } from "../utils/motion";
@@ -17,9 +16,7 @@ console.log("What are you waiting for?");
 `;
 const Hero = () => {
     const { scrollYProgress } = useScroll();
-    const scaleEffect = useTransform(scrollYProgress, [0, 0.06, 0.12], [0.6, 1, 1]);
-    const s = useSpring(scaleEffect,{stiffness: 100});
-    // const motionEffect = useTransform(scrollYProgress, [0, 0.05, 0.1], [0, -100, 0]);
+    const scaleEffect = useTransform(scrollYProgress, [0, 0.06, 0.12], [0.6, 1, 1], { ease: easeInOut, });
 
     return (
         <section className="w-full">
@@ -56,7 +53,7 @@ const Hero = () => {
                 </a>
             </div>
             <motion.div
-                style={{ scale: s }}
+                style={{ scale: scaleEffect }}
                 className="bg-black max-w-[90%]  md:max-w-7xl text-lg sm:text-2xl rounded-xl mx-auto overflow-hidden"
             >
                 <div className="bg-gray-800 w-full h-2 p-4 flex flex-row-reverse gap-4">

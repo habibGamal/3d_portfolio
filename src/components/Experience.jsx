@@ -1,15 +1,13 @@
 import React from "react";
-import {
-    VerticalTimeline,
-    VerticalTimelineElement,
-} from "react-vertical-timeline-component/dist-modules";
+import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component/dist-modules";
 import { motion } from "framer-motion";
 import "react-vertical-timeline-component/style.min.css";
 import { styles } from "../styles";
 import { experiences } from "../constants";
 import SectionWrapper from "../hoc/SectionWrapper";
-import { textVariant } from "../utils/motion";
+import { fadeIn, textVariant } from "../utils/motion";
 import SectionHead from "./SectionHead";
+import useMediaQuery from "../hooks/useMediaQuery";
 const ExperienceCard = ({ experience }) => {
     return (
         <VerticalTimelineElement
@@ -30,33 +28,28 @@ const ExperienceCard = ({ experience }) => {
                 </div>
             }
         >
-            <div>
-                <h3 className="text-white text-xl font-bold">
-                    {experience.title}
-                </h3>
-                <p className="text-secondary text-lg font-semibold">
-                    {experience.company_name}
-                </p>
-            </div>
-            <ul className="mt-5 list-disc ml-5 space-y-2">
-                {experience.points.map((point, index) => (
-                    <li className="text-white-100 pl-1 tracking-wider">
-                        {point}
-                    </li>
-                ))}
-            </ul>
+            <motion.div variants={fadeIn("up")} initial="hidden" whileInView="show">
+                <div>
+                    <h3 className="text-white text-xl font-bold">{experience.title}</h3>
+                    <p className="text-secondary text-lg font-semibold">{experience.company_name}</p>
+                </div>
+                <ul className="mt-5 list-disc ml-5 space-y-2">
+                    {experience.points.map((point, index) => (
+                        <li className="text-white-100 pl-1 tracking-wider">{point}</li>
+                    ))}
+                </ul>
+            </motion.div>
         </VerticalTimelineElement>
     );
 };
 const Experience = () => {
+    const smallDevice = useMediaQuery('(max-width: 768px)');
+
     return (
         <>
-            <SectionHead
-                title="Work Experience."
-                subTitle="What I have done so far"
-            />
+            <SectionHead title="Work Experience." subTitle="What I have done so far" />
             <div className="mt-20 flex flex-col">
-                <VerticalTimeline>
+                <VerticalTimeline animate={!smallDevice}>
                     {experiences.map((experience, index) => (
                         <ExperienceCard key={index} experience={experience} />
                     ))}

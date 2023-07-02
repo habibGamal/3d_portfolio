@@ -1,4 +1,5 @@
 import { BrowserRouter } from "react-router-dom";
+import { motion } from "framer-motion";
 import { Navbar, Hero, About, Contact, Experience, Feedbacks, Tech, Works, StarsCanvas } from "./components";
 function App() {
     return (
@@ -13,8 +14,17 @@ function App() {
                 <Experience />
                 {/* <Tech /> */}
                 <Feedbacks />
-                <div className="relative z-0 ">
-                    <StarsCanvas />
+                <div className="relative z-0 overflow-hidden">
+                    {/* <StarsCanvas /> */}
+                    <motion.img
+                        animate={{
+                            x: [0, 1000, 0],
+                            y: [0, 10, 0],
+                            transition: { duration: 60, repeat: Infinity },
+                        }}
+                        className="w-full h-auto absolute inset-0 z-[-1]"
+                        src="/sky-stars.png"
+                    />
                     <Contact />
                 </div>
             </div>

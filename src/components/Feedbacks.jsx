@@ -9,7 +9,7 @@ import SectionHead from "./SectionHead";
 const FeedbackCard = ({ testimonial, index }) => {
     return (
         <motion.div
-            variants={fadeIn("", "spring", index * 0.5, 0.75)}
+            variants={fadeIn("up", "spring", index * 0.3, 0.75)}
             className="bg-black-200 rounded-3xl w-full xs:w-[320px] p-10"
         >
             <span className="text-white font-black text-5xl">"</span>
