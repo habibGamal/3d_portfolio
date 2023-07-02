@@ -12,7 +12,7 @@ function App() {
                 <About />
                 <Works />
                 <Experience />
-                {/* <Feedbacks /> */}
+                <Feedbacks />
                 <div className="relative z-0 overflow-hidden">
                     <motion.img
                         animate={{
