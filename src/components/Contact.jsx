@@ -37,7 +37,7 @@ const Contact = () => {
                     {contactData.map((contact, index) => (
                         <div key={index} className="flex gap-8 items-center ">
                             <img src={contact.icon} alt="" />
-                            <a className="hover:text-blue-500" href={contact.link}>
+                            <a className="hover:text-blue-500 underline" href={contact.link}>
                                 {contact.title}
                             </a>
                         </div>

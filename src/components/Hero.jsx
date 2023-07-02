@@ -18,6 +18,7 @@ console.log("What are you waiting for?");
 const Hero = () => {
     const { scrollYProgress } = useScroll();
     const scaleEffect = useTransform(scrollYProgress, [0, 0.06, 0.12], [0.6, 1, 1]);
+    const s = useSpring(scaleEffect,{stiffness: 100});
     // const motionEffect = useTransform(scrollYProgress, [0, 0.05, 0.1], [0, -100, 0]);
 
     return (
@@ -55,7 +56,7 @@ const Hero = () => {
                 </a>
             </div>
             <motion.div
-                style={{ scale: scaleEffect }}
+                style={{ scale: s }}
                 className="bg-black max-w-[90%]  md:max-w-7xl text-lg sm:text-2xl rounded-xl mx-auto overflow-hidden"
             >
                 <div className="bg-gray-800 w-full h-2 p-4 flex flex-row-reverse gap-4">
